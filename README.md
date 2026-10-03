@@ -61,6 +61,15 @@ node --env-file=.env scripts/bench-live.mjs 10
 
 The first command compares cold startup without an API call. The second compares complete requests with the same pack and state, alternating versions; 10 measured runs plus one warmup per version make 22 API calls. Both commands rebuild a missing or stale native executable before timing. See [benchmark methodology and observed results](docs/benchmarks.md).
 
+In one end-to-end run on macOS Intel with Node 24.21.0, ScriptC 0.2.2, and Jev 1.13.0, the native CLI showed a **2.25× median speedup**:
+
+| Runtime | Median | p95 |
+| --- | ---: | ---: |
+| Node | 361.0 ms | 412.0 ms |
+| Native | 160.6 ms | 246.2 ms |
+
+This measures the whole CLI request, including process startup, network travel, and Jev inference. It does not measure Jev model speed in isolation. The [full samples and method](docs/benchmarks.md) are available for review; results will vary with machine and API conditions.
+
 `TYPESAFE_API_URL` can override the default `https://api.typesafe.ai/v1/systemone` for local tests. Only set it to a server you trust: the CLI sends the bearer key to that URL.
 
 ## Sharing
