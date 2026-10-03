@@ -1,0 +1,17 @@
+{
+  "questions": {
+    "department": {
+      "type": "choice",
+      "instructions": "Which team should handle this request?",
+      "criteria": {
+        "billing": "Payments, invoices, or refunds",
+        "technical": "Bugs, outages, or integration issues",
+        "sales": "Pricing, plans, or new accounts"
+      }
+    },
+    "is_urgent": {
+      "type": "noul",
+      "instructions": "Does this request need a prompt response?"
+    }
+  }
+}

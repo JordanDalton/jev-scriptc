@@ -1,0 +1,20 @@
+{
+  "name": "jev-hella-fast",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/cli.test.mjs",
+    "test:native": "node --test test/native.test.mjs",
+    "check:public": "node scripts/check-public-files.mjs",
+    "coverage:compile": "scriptc coverage jev.ts",
+    "build": "node scripts/build.mjs",
+    "bench:start": "node scripts/bench-start.mjs",
+    "bench:live": "node scripts/bench-live.mjs"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "devDependencies": {
+    "scriptc": "0.2.2"
+  }
+}
