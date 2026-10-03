@@ -1,4 +1,4 @@
-# Jev, hella fast
+# Jev + ScriptC
 
 A small, unofficial CLI for [TypeSafe Jev](https://docs.typesafe.ai/introduction/quickstart). Its TypeScript source runs with Node, and [ScriptC](https://scriptc.dev/docs) compiles the same source to a native executable. This repository currently tests the native build on **macOS Intel (x64)**.
 
